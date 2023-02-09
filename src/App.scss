@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 }
 
@@ -22,7 +23,43 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: relative;
+
+    .mobileMenu{
+        width: 30px;
+        height: 30px;
+        // background-color: #fff;
+        display: none;
+    }
+    .mobileMenuNav{
+        position: absolute;
+        width: 100%;
+        top: 51px;
+        
+        left: 0;
+        height: 0px;
+        background-color: grey;
+        transition: 0.3s;
+        color: white;
+        display: flex;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        .mobileMenuUlDesign{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 3px;
+            li{
+                cursor: pointer;
+                font-size: 18px;
+                letter-spacing: 1px;
+                
+            }
+        }
+    }
+    // position: fixed;
 }
 
 .headerText{
@@ -68,9 +105,342 @@ button{
     flex-direction:column;
     row-gap: 30px;
     justify-content: center;
-    height: 650px;
+    // min-height: 637px;
     padding: 31.5px 0;
     background-color: black;
+    color: white;
 
 }
 
+footer{
+    width: 100%;
+    height: 25px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    span{
+        display: inline-block;
+        // width: 120px;
+        height: 100%;
+    color: white;
+
+    }
+}
+
+.about_header{
+    max-width: 1100px;
+    display: flex;
+    align-items: flex-end;
+    &-image{
+        width: 300px;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &-content{
+        max-width: 800px;
+        color: white;
+        font-size: 55px;
+
+    }
+}
+
+
+.about-contentBox{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px
+    ;
+
+    &_header{
+        color: red;
+    }
+}
+
+.contact{
+    // height: 100%;
+    display: flex;
+    width: 100%;
+    padding: 10px 60px;
+    align-items: center ;
+    justify-content: center;
+
+    &_image{
+        width: 400px;
+        img{
+            width: 100%;
+        }
+    }
+    &_content{
+        max-width: 700px;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px
+        ;
+        &-text{
+            font-size: 18px;
+        }
+
+        &-header{
+            font-size: 65px;
+        }
+    }
+
+    .socialProfiles{
+        list-style: none;
+        line-height: 50px;
+    }
+}
+
+
+.portfolios{
+    display: flex;
+    justify-content: center;
+    width: 100%;    
+    padding: 20px 40px;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+
+.imageBox{
+    display: flex;
+    // width: 600px;
+    // height: 200px;
+    border-radius: 19px;
+    background-color: #191919;
+    border: 1px solid white;
+    &-image{
+        width: 220px;
+        height: 100%;
+        overflow: hidden;
+        border-radius: 19px;
+        img{
+            width: 100%;
+        }
+    }
+    &-content{
+        max-width: 400px;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &_main{
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            &_header{
+                font-weight: 800;
+                font-size: 22px;
+            }
+        }
+        
+    }
+}
+
+
+.blog{
+    .imageBox{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.journey{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+    
+    justify-content: space-between;
+    .journey_header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &_nav{
+        width: 250px;
+        ;
+        // background-color: red;
+        
+    }
+}
+
+
+.timeLine{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    row-gap: 10px
+    ;
+    .timeline{
+        display: flex;
+        p{
+            font-size: 30px;
+        }
+    }
+    .timeLineContents{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .timeLineContent{
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+            p{
+                color: grey;
+            }
+            .timeLineContent-text{
+
+                width: 210px;
+                min-height: 100px;
+                background-color: black;
+                border: 1px solid white;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                padding:  15px;
+                justify-content: space-evenly;
+                row-gap: 10px
+                ;
+                &_header{
+                    font-weight: 800;
+                    
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+
+#JourneyText{
+    max-width: 1100px;
+    // padding: 0 100px;
+}
+
+
+.blog{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 0 40px;
+    
+
+    .imageBox{
+        &-image{
+            width: 100%;
+            
+        }
+        &-content{
+            max-width: 240px;
+        }
+
+}}
+
+@media only screen and (max-width: 600px) {
+    .navbar{
+        justify-content: end;
+        padding-right: 30px;
+        .navbarMenu{
+            display: none !important;
+        }
+        .mobileMenu{
+            display: flex !important;
+        }
+    }
+
+
+    .journey_nav{
+        height: auto !important;
+        width: 100%;
+        .timeLine{
+       
+            .timeLineContents{
+                flex-direction: row;
+                overflow-x: scroll;
+            }
+            .timeLineContents::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+
+
+    .portfolios{
+
+        .imageBox{
+            display: flex;
+            flex-direction: column;
+            &-image{
+                width: 100%;
+            }
+        }
+    }
+
+    .headerText{
+        font-size: 35px;
+    }
+    .headerContent{
+        font-size: 16px;
+        padding: 0 10px;
+    }
+    .about_header{
+        &-image{
+            display: none !important;
+        }
+        &-content{
+        font-size: 30px;
+        text-align: center;
+
+        }
+    }
+
+    .contact_content{
+        &-header{
+            font-size: 35px;
+        }
+    }
+
+    .journey{
+        flex-direction: column-reverse;
+        &_nav{
+            height: 20px;
+        }
+
+        &_header{
+            .contact{
+                flex-direction: column;
+                &_image{
+                    width: 100%;
+                }
+                &_content{
+                    &-header{
+                        font-size: 30px;
+                    }
+                    &-text{
+                        font-size: 16px;
+                    }
+                }
+            }
+            #JourneyText{
+                font-size: 16px;
+                padding: 0 10px;
+            }
+        }
+    }
+  }
