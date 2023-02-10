@@ -1,9 +1,20 @@
 import { Contact } from "./Contact"
 import AboutHeaderImg from "../images/Saly-10.png"
 import { TimeLine } from "./TimeLine"
+import { Main } from "./Main"
+import { useEffect } from "react"
 
-export function Journey(){
+export function Journey({changePage}){
+    
+    let page = "Journey"
+
+    useEffect(()=>{
+      changePage(page)
+    },[])
+
+
     return(
+        <Main class="main">
         <div className="journey">
             <div className="journey_header">
                 <Contact image={AboutHeaderImg} header="The resolution, What am I gonna do?" text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard"></Contact>
@@ -13,5 +24,6 @@ export function Journey(){
                 <TimeLine></TimeLine>
             </div>
         </div>
+        </Main>
     )
 }

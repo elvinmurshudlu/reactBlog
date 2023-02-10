@@ -1,11 +1,19 @@
 
 import { TextContent } from "./Text"
 import { ButtonsField } from "./ButtonsField"
+import {Main} from "./Main"
+import { useEffect } from "react"
 
-export function Home(){
+
+export function Home({changePage}){
+    let page = "Home"
+
+    useEffect(()=>{
+      changePage(page)
+    },[])
 
     return(
-      <>  
+      <Main class="main">  
       
         
     <TextContent class="headerText" >Hey there 👋<br />
@@ -14,7 +22,7 @@ export function Home(){
     <ButtonsField class="buttonsField"/>
       
     
-    </>
+    </Main>
     )
 
 }

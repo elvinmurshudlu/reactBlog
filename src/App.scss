@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 
+}
+a{
+    color: white;
 }
 
 .navbarMenu{
@@ -24,12 +29,20 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    .currentPage{
+        display: none;
+        color: white;
+    }
 
     .mobileMenu{
         width: 30px;
         height: 30px;
         // background-color: #fff;
         display: none;
+        position: absolute;
+        right: 30px;
+        top: 10px;
+
     }
     .mobileMenuNav{
         position: absolute;
@@ -87,6 +100,8 @@ button{
     border-radius: 10px;
     cursor: pointer;
 }
+
+
 .about{
     color: white;
 }
@@ -105,7 +120,7 @@ button{
     flex-direction:column;
     row-gap: 30px;
     justify-content: center;
-    // min-height: 637px;
+    min-height: 637px;
     padding: 31.5px 0;
     background-color: black;
     color: white;
@@ -354,13 +369,14 @@ footer{
 
 @media only screen and (max-width: 600px) {
     .navbar{
-        justify-content: end;
-        padding-right: 30px;
         .navbarMenu{
             display: none !important;
         }
         .mobileMenu{
             display: flex !important;
+        }
+        .currentPage{
+            display: flex;
         }
     }
 

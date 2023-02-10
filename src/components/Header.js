@@ -9,13 +9,13 @@ export function Header(props){
     function openMenu(){
         opener(!mobileMenuOpened)
         console.log(mobileMenuOpened)
-    }
-    
+    }   
+
 
     return(
-     <nav className={props.class} ><Ul items={navBar} class= "navbarMenu"/><div onClick={openMenu} className="mobileMenu"><img src={menu} alt="" /></div>
+     <nav className={props.class} ><Ul   items={navBar} class= "navbarMenu"/><span className="currentPage">{props.currentPage}</span><div onClick={openMenu} className="mobileMenu"><img src={menu} alt="" /></div>
      <div className="mobileMenuNav" style={{height:mobileMenuOpened ? "150px" : "0px"}}>
-        <Ul items={navBar} class="mobileMenuUlDesign"></Ul>
+        <Ul  items={navBar} class="mobileMenuUlDesign"></Ul>
      </div>
      </nav>
 

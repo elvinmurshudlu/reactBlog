@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: white;
 }
 
 .navbarMenu {
@@ -24,10 +30,17 @@
   justify-content: center;
   position: relative;
 }
+.navbar .currentPage {
+  display: none;
+  color: white;
+}
 .navbar .mobileMenu {
   width: 30px;
   height: 30px;
   display: none;
+  position: absolute;
+  right: 30px;
+  top: 10px;
 }
 .navbar .mobileMenuNav {
   position: absolute;
@@ -100,6 +113,7 @@
   flex-direction: column;
   row-gap: 30px;
   justify-content: center;
+  min-height: 637px;
   padding: 31.5px 0;
   background-color: black;
   color: white;
@@ -307,15 +321,14 @@ footer span {
 }
 
 @media only screen and (max-width: 600px) {
-  .navbar {
-    justify-content: end;
-    padding-right: 30px;
-  }
   .navbar .navbarMenu {
     display: none !important;
   }
   .navbar .mobileMenu {
     display: flex !important;
+  }
+  .navbar .currentPage {
+    display: flex;
   }
   .journey_nav {
     height: auto !important;
